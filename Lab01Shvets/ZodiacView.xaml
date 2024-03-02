@@ -1,0 +1,40 @@
+﻿<Window x:Class="Lab01Shvets.ZodiacView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab01Shvets"
+        mc:Ignorable="d"
+        Title="Zodiac App" Height="450" Width="500" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Name="TitleText" Grid.Row="0" Text="Zodiac App" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"/>
+
+        <TextBlock Text="Select your birthday:" HorizontalAlignment="Center" Grid.Row="2" FontSize="16" Margin="5"/>
+        <DatePicker Name="DateChoice" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5" SelectedDateChanged="DateChoice_SelectedDateChanged"/>
+
+        <Label Name="AgeLabel" Content="Age" Grid.Row="4" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Name="AgeOutput" Text="{Binding Age}" Grid.Row="5" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"/>
+
+        <Label Name="WesternZodiacLabel" Content="Western Zodiac" Grid.Row="7" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Name="WesternZodiacOutput" Text="{Binding WesternZodiac}" Grid.Row="8" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"/>
+
+        <Label Name="ChineseZodiacLabel" Content="Chinese Zodiac" Grid.Row="10" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"/>
+        <TextBlock Name="ChineseZodiacOutput" Text="{Binding ChineseZodiac}" Grid.Row="11" FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5"/>
+    </Grid>
+
+</Window>
